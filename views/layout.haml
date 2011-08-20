@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Chad Jolly - Ruby On Rails Developer in Denver, Colorado
+    %link{:rel => 'stylesheet', :href => "/stylesheets/screen.css", :media => "screen"}
+    %script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'}
+    %script{:type => 'text/javascript', :src => '/javascripts/application.js'}
+    %meta{:name => 'viewport', :content => 'width=device-width'}
+    = erb(:analytics, :layout => false) if settings.environment == :production
+  %body
+    = yield
+    %footer
+      &copy Chad Jolly

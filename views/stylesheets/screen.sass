@@ -1,6 +1,18 @@
-body
-  color: white
-  background-color: grey
+@import "compass/reset"
+@import "blueprint"
 
-a
-  color: white
+$cj-blue: #0287c8
+$cj-gray: #434343
+
+$font-color: #fff
+$header-color: $font-color
+$link-color: $font-color
+$link-visited-color: $font-color
+
+body
+  +blueprint(true)
+  background-color: $cj-gray
+  #content
+    +container
+  #footer
+    +container

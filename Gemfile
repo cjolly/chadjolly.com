@@ -14,6 +14,10 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem 'sqlite3'
+end
+
 group :production do
   gem 'pg'
   gem 'rack-rewrite'

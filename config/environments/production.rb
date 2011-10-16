@@ -57,4 +57,14 @@ Chadjolly::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  config.middleware.use Rack::Rewrite do
+    # SEO Rewrites
+    # - Consistent domain
+    r301 %r{.*}, "http://chadjolly.com$&",
+      :if => Proc.new {|rack_env| rack_env['SERVER_NAME'] != "chadjolly.com" }
+
+    # - Remove trailing slash
+    r301 %r{^(.+)/$}, '$1'
+  end
 end

@@ -1,4 +1,5 @@
 @import "compass/reset"
+@import "compass/typography/lists/horizontal-list"
 @import "blueprint"
 
 $cj-blue: #0287c8
@@ -16,3 +17,11 @@ body
     +container
   #footer
     +container
+    margin-top: 2em
+    padding-top: 0.25em
+    border-top: 1px dotted $font-color
+    p
+      float: left
+    ul
+      float: right
+      +horizontal-list

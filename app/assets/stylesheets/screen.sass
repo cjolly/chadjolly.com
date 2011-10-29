@@ -5,16 +5,18 @@
 $cj-blue: #0287c8
 $cj-gray: #434343
 
-$font-color: #fff
+$font-color: $cj-gray
 $header-color: $font-color
 $link-color: $font-color
 $link-visited-color: $font-color
 
 body
   +blueprint(true)
-  background-color: $cj-gray
+  background-color: #fff
   #content
     +container
+    margin-top: 2em
+
   #footer
     +container
     margin-top: 2em
@@ -23,5 +25,5 @@ body
     p
       float: left
     ul
-      float: right
       +horizontal-list
+      float: right

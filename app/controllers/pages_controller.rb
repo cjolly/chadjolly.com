@@ -16,7 +16,8 @@ class PagesController < ApplicationController
         [2007, 607],
         [2008, 591],
         [2009, 544],
-        [2010, 480]
+        [2010, 480],
+        [2011, 448]
       ],
 
       'Emily' => [
@@ -27,7 +28,8 @@ class PagesController < ApplicationController
         [2007, 2443],
         [2008, 2357],
         [2009, 2217],
-        [2010, 2081]
+        [2010, 2081],
+        [2011, 2000]
       ],
 
       'Amy' => [
@@ -38,7 +40,8 @@ class PagesController < ApplicationController
         [2007, 2444],
         [2008, 2358],
         [2009, 2218],
-        [2010, 2082]
+        [2010, 2082],
+        [2011, 2001]
       ]
     }
   end

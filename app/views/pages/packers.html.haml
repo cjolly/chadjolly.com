@@ -1,0 +1,24 @@
+%h1 Packers Season Tickets
+%p My parents put #{link_to 'me', root_path} on the packers season tickets waiting list when I was born. 30 years ago. I still don't have tickets. So, when the post card arrived in the mail today informing me that I was number 480 on the list I thought I should share this journey.
+
+%h2 My story about being on the Green Bay Packers season tickets waiting list for my entire life.
+
+- @data_points.each do |name, data|
+  %table
+    %caption= name
+    %thead
+      %tr
+        %th Year
+        %th Position
+        %th Change
+    %tbody
+      - data.each_with_index do |year_data, i|
+        %tr
+          %td= year_data.first
+          %td= year_data.last
+          %td= i > 0 ? data[i-1].last - year_data.last : '&nbsp;'.html_safe
+
+%p An average of 33 people move off of the list every year. If this trend continues I'll have season tickets to Lambeau Field when I'm 45 years old, 15 years from now.
+
+%h3 News
+= link_to 'Packers Announce 6,600 Seat Expansion', 'http://packersnews.greenbaypressgazette.com/article/20110825/PKR01/110825163'

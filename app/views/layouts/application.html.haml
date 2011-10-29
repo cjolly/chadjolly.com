@@ -1,9 +1,9 @@
 !!!
 %html
   %head
-    %title Chad Jolly - Ruby On Rails Developer in Denver, Colorado
+    %title= @page_title || "Chad Jolly - Ruby On Rails Developer in Denver, Colorado"
     %meta{:name => 'viewport', :content => 'width=device-width'}
-    %meta{:name => 'description', :content => 'Programmer, Packers Fan.'}
+    %meta{:name => 'description', :content => @meta_description || 'Programmer, Packers Fan.'}
     = stylesheet_link_tag('application')
     = render 'layouts/analytics' if Rails.env.production?
   %body

@@ -1,5 +1,7 @@
 @import "compass/reset"
 @import "compass/typography/lists/horizontal-list"
+
+$blueprint-grid-columns: 10
 @import "blueprint"
 
 $cj-blue: #0287c8
@@ -10,20 +12,28 @@ $header-color: $font-color
 $link-color: $font-color
 $link-visited-color: $font-color
 
+
 body
   +blueprint(true)
   background-color: #fff
   #content
     +container
+    +prepend(1)
+    +append(1)
     margin-top: 2em
 
   #footer
     +container
+    +prepend(1)
+    +append(1)
     margin-top: 2em
-    padding-top: 0.25em
-    border-top: 1px dotted $font-color
+    margin-bottom: 2em
+    text-align: center
     p
-      float: left
-    ul
-      +horizontal-list
-      float: right
+      padding-top: 0.25em
+      border-top: 1px dotted $font-color
+    a
+      margin: 0.25em
+
+  .logo
+    color: $cj-blue

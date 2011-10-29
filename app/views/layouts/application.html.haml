@@ -2,7 +2,6 @@
 %html
   %head
     %title= @page_title || "Chad Jolly - Ruby On Rails Developer in Denver, Colorado"
-    %meta{:name => 'viewport', :content => 'width=device-width'}
     %meta{:name => 'description', :content => @meta_description || 'Programmer, Packers Fan.'}
     = stylesheet_link_tag('application')
     = render 'layouts/analytics' if Rails.env.production?
@@ -10,17 +9,9 @@
     %section#content
       = yield
     %footer#footer
-      %p
-        &copy
-        = link_to 'Chad Jolly', root_path
-      %ul
-        %li
-          %a{:href => 'https://github.com/cjolly/chadjolly.com'} This site's source code
-        %li
-          %a{:href => 'https://github.com/cjolly'} Github
-        %li
-          %a{:href => 'https://twitter.com/#!/chadjolly'} Twitter
-        %li
-          %a{:href => 'https://www.facebook.com/chad.a.jolly'} Facebook
-        %li
-          %a{:href => 'http://www.linkedin.com/in/chadjolly'} LinkedIn
+      %p &copy; Chad Jolly
+      %a{:href => 'https://github.com/cjolly/chadjolly.com'} This site's source code
+      %a{:href => 'https://github.com/cjolly'} Github
+      %a{:href => 'https://twitter.com/#!/chadjolly'} Twitter
+      %a{:href => 'https://www.facebook.com/chad.a.jolly'} Facebook
+      %a{:href => 'http://www.linkedin.com/in/chadjolly'} LinkedIn

@@ -1,5 +1,5 @@
 %h1 Packers Season Tickets
-%p My parents put #{link_to 'me', root_path} on the packers season tickets waiting list when I was born. 30 years ago. I still don't have tickets. So, when the post card arrived in the mail today informing me that I was number 480 on the list I thought I should share this journey.
+%p My parents put #{link_to 'me', root_path} on the packers season tickets waiting list when I was born #{distance_of_time_in_words_to_now(Date.parse('May 31, 1980'))} ago. I still don't have tickets. So, when the post card arrived in the mail today informing me that I was number 480 on the list I thought I should share this journey.
 
 %h2 My story about being on the Green Bay Packers season tickets waiting list for my entire life.
 
@@ -21,4 +21,6 @@
 %p An average of 33 people move off of the list every year. If this trend continues I'll have season tickets to Lambeau Field when I'm 45 years old, 15 years from now.
 
 %h3 News
-= link_to 'Packers Announce 6,600 Seat Expansion', 'http://packersnews.greenbaypressgazette.com/article/20110825/PKR01/110825163'
+%p= link_to 'Packers stock sale could start as early as Nov. 15 (NFL.com)', 'http://www.nfl.com/news/story/09000d5d823ee5c9/article/packers-stock-sale-could-start-as-early-as-nov-15'
+%p= link_to 'Expansion Planned for Lambeau (NY Times)', 'http://www.nytimes.com/2011/08/26/sports/football/green-bay-packers-announce-expansion-plan-for-lambeau-field.html'
+%p= link_to "Packers announce plans for Lambeau Field's south, north end zones (Packers.com)", 'http://www.packers.com/news-and-events/article-1/Packers-announce-plans-for-Lambeau-Fields-south-north-end-zones/1df5d407-10c0-43fd-b12b-e87a632a8c11'

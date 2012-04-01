@@ -40,16 +40,18 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.1.2)
-    compass (0.12.alpha.0)
+    compass (0.12.1)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    compass-rails (1.0.1)
+      compass (~> 0.12.0)
     daemons (1.1.8)
     erubis (2.7.0)
     eventmachine (0.12.10)
     execjs (1.2.9)
       multi_json (~> 1.0)
-    fssm (0.2.7)
+    fssm (0.2.8.1)
     haml (3.1.2)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -132,7 +134,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.1.1)
-  compass (~> 0.12.alpha)
+  compass-rails
   haml-rails
   jquery-rails
   newrelic_rpm

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Chadjolly::Application.load_tasks
+ChadJolly::Application.load_tasks

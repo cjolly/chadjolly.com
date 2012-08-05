@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '~> 3.2.3'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'rack-canonical-host'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,7 +25,6 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rack-rewrite'
   gem 'thin'
   gem 'newrelic_rpm'
 end

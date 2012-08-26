@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby '1.9.3'
 
-gem 'rails', '~> 3.2.8rc2'
+gem 'rails', '~> 3.2.8'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'rack-canonical-host'

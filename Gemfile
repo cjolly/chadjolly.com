@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby '1.9.3'
 
-gem 'rails', '~> 3.2.8'
+gem 'rails', '~> 3.2.11'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'rack-canonical-host'
@@ -17,6 +17,8 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do

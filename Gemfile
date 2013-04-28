@@ -1,5 +1,5 @@
-source 'http://rubygems.org'
-ruby '1.9.3'
+source 'https://rubygems.org'
+ruby '2.0.0'
 
 gem 'rails', '~> 3.2.12'
 gem 'haml-rails'
@@ -21,8 +21,8 @@ group :development do
   gem 'binding_of_caller'
 end
 
+gem 'rspec-rails', group: [:test, :development]
 group :test do
-  gem 'rspec-rails'
   gem 'capybara'
 end
 

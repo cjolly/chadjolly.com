@@ -1,9 +1,3 @@
-@import "compass/reset"
-@import "compass/typography/lists/horizontal-list"
-
-$blueprint-grid-columns: 8
-@import "blueprint"
-
 $cj-blue: #0287c8
 $cj-gray: #434343
 
@@ -12,20 +6,12 @@ $header-color: $font-color
 $link-color: $font-color
 $link-visited-color: $font-color
 
-
 body
-  +blueprint(true)
   background-color: #fff
   #content
-    +container
-    +prepend(1)
-    +append(1)
     margin-top: 2em
 
   #footer
-    +container
-    +prepend(1)
-    +append(1)
     margin-top: 10px
     margin-bottom: 10px
     text-align: center

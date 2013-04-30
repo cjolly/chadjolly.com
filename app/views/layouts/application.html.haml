@@ -1,18 +1,27 @@
 !!!
-%html
+%html{lang: 'en'}
   %head
     %title= @page_title || "Chad Jolly - Ruby On Rails Developer in Denver, Colorado"
     %meta{:name => 'description', :content => @meta_description || 'Programmer, Packers Fan.'}
-    %meta{:name => 'viewport', :content => 'width=device-width'}
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
     = stylesheet_link_tag('application')
+    = javascript_include_tag('application')
     = render 'layouts/analytics' if Rails.env.production?
   %body
-    %section#content
-      = yield
+    #main{role: 'main'}
+      .container
+        = yield
     %footer#footer
-      %p &copy; Chad Jolly
-      %a{:href => 'https://github.com/cjolly/chadjolly.com', :title => "This site's source code"} Source
-      %a{:href => 'https://github.com/cjolly', :title => "Open Source Contributions"} Github
-      %a{:href => 'https://twitter.com/#!/chadjolly', :title => "Blathering"} Twitter
-      %a{:href => 'https://www.facebook.com/chad.a.jolly', :title => "Keeping in touch with Mom"} Facebook
-      %a{:href => 'http://www.linkedin.com/in/chadjolly', :title => "Not sure what this does"} LinkedIn
+      .container
+        %p.text-center &copy; Chad Jolly
+        %ul.inline.text-center
+          %li
+            %a{:href => 'https://github.com/cjolly/chadjolly.com', :title => "This site's source code"} Source
+          %li
+            %a{:href => 'https://github.com/cjolly', :title => "Open Source Contributions"} Github
+          %li
+            %a{:href => 'https://twitter.com/#!/chadjolly', :title => "Blathering"} Twitter
+          %li
+            %a{:href => 'https://www.facebook.com/chad.a.jolly', :title => "Keeping in touch with Mom"} Facebook
+          %li
+            %a{:href => 'http://www.linkedin.com/in/chadjolly', :title => "Not sure what this does"} LinkedIn

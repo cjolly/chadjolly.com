@@ -11,7 +11,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 
-gem 'unicorn', groups: [:production]
+gem 'unicorn', group: [:production]
 
-gem 'rspec-rails', groups: [:development, :test]
-gem 'capybara', groups: [:test]
+gem 'rspec-rails', group: [:development, :test]
+group :test do
+  gem 'capybara'
+end
+

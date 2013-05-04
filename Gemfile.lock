@@ -69,7 +69,6 @@ GEM
     minitest (4.7.3)
     multi_json (1.7.2)
     nokogiri (1.5.9)
-    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-canonical-host (0.0.8)
@@ -147,7 +146,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   haml-rails
   jquery-rails
-  pg
   rack-canonical-host
   rails (= 4.0.0.rc1)
   rspec-rails

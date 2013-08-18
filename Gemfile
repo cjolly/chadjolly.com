@@ -11,7 +11,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'rack-canonical-host'
 
-gem 'unicorn', group: [:production]
+group :production do
+  gem 'rails_12factor'
+  gem 'unicorn'
+end
 
 gem 'rspec-rails', group: [:development, :test]
 group :test do

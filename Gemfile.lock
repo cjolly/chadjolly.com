@@ -45,6 +45,9 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     diff-lcs (1.2.4)
+    dotenv (0.8.0)
+    dotenv-rails (0.8.0)
+      dotenv (= 0.8.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -149,6 +152,7 @@ DEPENDENCIES
   bootstrap-sass
   capybara
   coffee-rails (~> 4.0.0)
+  dotenv-rails
   haml-rails
   jquery-rails
   rack-canonical-host

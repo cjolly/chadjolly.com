@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-ChadJolly::Application.config.secret_key_base = '4de266b898b88372108b6e3225f4a5660ed15cff72a2ac72b2e5340af88a175ca0afc2f0faee6271f7e6b6f3a210441b88b6e1d6360f5b69a60d84a0f7c810d0'
+ChadJolly::Application.config.secret_key_base = ENV['RAILS_SECRET_KEY_BASE']

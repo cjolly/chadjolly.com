@@ -16,7 +16,11 @@ group :production do
   gem 'unicorn'
 end
 
-gem 'rspec-rails', group: [:development, :test]
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'dotenv-rails'
+end
+
 group :test do
   gem 'capybara'
 end

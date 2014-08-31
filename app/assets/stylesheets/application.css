@@ -1,3 +1,6 @@
 /*
- *= require_tree .
+ *= require basscss
+ *= require pixyll
  */
+
+body {background-color: 'red'}

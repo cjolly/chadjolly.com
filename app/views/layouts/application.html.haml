@@ -1,25 +1,27 @@
 !!!
 %html{lang: 'en'}
   %head
-    %title= @page_title || "Chad Jolly - Ruby On Rails Developer in Denver, Colorado"
+    %title= @page_title || "Chad Jolly"
     %meta{:name => 'description', :content => @meta_description || 'Programmer, Packers Fan.'}
     %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
     = stylesheet_link_tag('application')
     = javascript_include_tag('application')
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
     = render 'layouts/analytics' if Rails.env.production?
   %body
-    #main{role: 'main'}
-      .container
-        = yield
-    %footer#footer
-      .container
-        %p.text-center &copy; Chad Jolly
-        %ul.inline.text-center
-          %li
-            %a{:href => 'https://github.com/cjolly/chadjolly.com', :title => "This site's source code"} Source
-          %li
-            %a{:href => 'https://github.com/cjolly', :title => "Open Source Contributions"} Github
-          %li
-            %a{:href => 'https://twitter.com/chadjolly', :title => "Blathering"} Twitter
-          %li
-            %a{:href => 'https://www.facebook.com/chad.a.jolly', :title => "Keeping in touch with Mom"} Facebook
+    .site-wrap
+      %header.site-header.px2.px-responsive
+        .mt2.wrap
+          .measure
+            = link_to 'Chad Jolly', root_path
+            %nav.site-nav.right
+              = link_to 'github', 'https://github.com/cjolly'
+              = link_to 'twitter', 'https://twitter.com/chadjolly'
+              = link_to 'facebook', 'https://www.facebook.com/chad.a.jolly'
+      .post.p2.p-responsive.wrap
+        .measure
+          .home
+            .posts
+              .post
+                = yield

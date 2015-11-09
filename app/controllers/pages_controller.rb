@@ -48,4 +48,8 @@ class PagesController < ApplicationController
       ]
     }
   end
+
+  def weather
+
+  end
 end

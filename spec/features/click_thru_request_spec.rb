@@ -15,4 +15,9 @@ describe "The Site" do
     visit "/uptime-ping"
     expect(page).to have_content("OK")
   end
+
+  it "should display the weather page for dad" do
+    visit "/weather"
+    expect(page).to have_content("Jolly Weather Station")
+  end
 end

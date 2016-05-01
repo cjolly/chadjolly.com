@@ -112,7 +112,6 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
-    snitcher (0.3.2)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -134,8 +133,6 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    whois (3.6.5)
-      activesupport (>= 3)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -151,9 +148,7 @@ DEPENDENCIES
   rails_12factor
   rspec-rails
   sass-rails
-  snitcher
   unicorn
-  whois
 
 BUNDLED WITH
    1.10.6

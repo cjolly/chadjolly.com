@@ -50,6 +50,6 @@ class PagesController < ApplicationController
   end
 
   def weather
-
+    @station_id = ENV['WEATHER_STATION_ID']
   end
 end

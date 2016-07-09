@@ -1,4 +1,7 @@
-# This file is copied to spec/ when you run 'rails generate rspec:install'
+# SSL related ENV vars
+ENV["ACME_TOKEN"] = 'wile-e'
+ENV['ACME_KEY']   = 'coyote'
+
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'

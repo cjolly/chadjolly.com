@@ -1,6 +1,6 @@
 # SSL related ENV vars
-ENV["ACME_TOKEN"] = 'wile-e'
-ENV['ACME_KEY']   = 'coyote'
+ENV["ACME_TOKEN_1"] = 'wile-e'
+ENV['ACME_KEY_1']   = 'coyote'
 
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)

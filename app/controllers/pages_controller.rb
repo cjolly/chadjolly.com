@@ -52,4 +52,8 @@ class PagesController < ApplicationController
   def weather
     @station_id = ENV['WEATHER_STATION_ID']
   end
+
+  def radbuff
+
+  end
 end

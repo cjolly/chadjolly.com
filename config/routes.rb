@@ -3,6 +3,7 @@ ChadJolly::Application.routes.draw do
   root to: 'pages#home'
   get '/packers', to: 'pages#packers'
   get '/weather', to: 'pages#weather'
+  get 'radbuff',  to: 'pages#radbuff'
 
   # Let's Encrypt!
   # https://github.com/dmathieu/sabayon

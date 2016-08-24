@@ -5,6 +5,8 @@ gem 'rails', '~> 4.1.0'
 gem 'haml-rails'
 gem 'sass-rails'
 gem 'rack-canonical-host'
+gem 'coffee-rails'
+gem 'jquery-rails'
 
 group :production do
   gem 'rails_12factor'

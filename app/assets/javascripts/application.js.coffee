@@ -1,7 +1,6 @@
 #= require jquery
 
 $ ->
-
   window.audioCtx = new (window.AudioContext || window.webkitAudioContext)()
 
   navigator.mediaDevices
@@ -15,12 +14,12 @@ $ ->
       delayPedal.delayTime.value = 0
       delayPedal.connect(audioCtx.destination)
 
-  $('#js_stop').on 'click', ->
+  $('#js_mute').on 'click', ->
     if audioCtx.state == 'running'
+      $(this).text('Unmute')
       audioCtx.suspend()
-
-  $('#js_start').on 'click',  ->
-    if audioCtx.state == 'suspended'
+    else if audioCtx.state == 'suspended'
+      $(this).text('Mute')
       audioCtx.resume()
 
   $('#js_range').on 'change', ->

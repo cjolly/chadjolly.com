@@ -11,6 +11,7 @@ gem 'jquery-rails'
 group :production do
   gem 'rails_12factor'
   gem 'unicorn'
+  gem 'uglifier'
 end
 
 group :development, :test do

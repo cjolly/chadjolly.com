@@ -1,7 +1,8 @@
 #= require jquery
+#= require mozdevs/polyfill
 
 $ ->
-  window.audioCtx = new (window.AudioContext || window.webkitAudioContext)()
+  window.audioCtx = new window.AudioContext()
 
   navigator.mediaDevices
     .getUserMedia(audio: true)
@@ -13,6 +14,11 @@ $ ->
 
       delayPedal.delayTime.value = 0
       delayPedal.connect(audioCtx.destination)
+
+      setInterval ->
+        console?.log audioCtx.state + ': ' + delayPedal.delayTime.value.toFixed(2)
+      , 1000
+
 
   $('#js_mute').on 'click', ->
     if audioCtx.state == 'running'
@@ -32,7 +38,3 @@ $ ->
       x + ' second delay'
 
     $('#js_delay').text info
-
-  setInterval ->
-    console?.log audioCtx.state + ': ' + delayPedal.delayTime.value.toFixed(2)
-  , 1000

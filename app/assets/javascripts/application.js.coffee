@@ -3,8 +3,8 @@
 
 # TODO:
 # Timing
+# Errors for browser feature absence.
 # save state - so on reload/accidental navigate is saves last setting
-
 
 $ ->
   $('#js_mute').on 'click', ->

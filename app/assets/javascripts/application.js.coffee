@@ -21,6 +21,7 @@ $ ->
     else
 
       window.audioCtx = new window.AudioContext()
+      window.usage = 0
 
       navigator.mediaDevices
         .getUserMedia(audio: true)
@@ -39,7 +40,9 @@ $ ->
 
 
           setInterval ->
-            console?.log audioCtx.state + ': ' + delayPedal.delayTime.value.toFixed(2)
+            usage++ if audioCtx.state == 'running'
+            console.log
+            console?.log audioCtx.state + ': ' + delayPedal.delayTime.value.toFixed(2) + ', total: ' + usage
           , 1000
 
       $('#js_range').on 'change', ->

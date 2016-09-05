@@ -41,7 +41,6 @@ $ ->
 
           setInterval ->
             usage++ if audioCtx.state == 'running'
-            console.log
             console?.log audioCtx.state + ': ' + delayPedal.delayTime.value.toFixed(2) + ', total: ' + usage
           , 1000
 

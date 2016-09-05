@@ -6,9 +6,11 @@
     Ensure audio is working
     %br
     = button_tag 'Start', id: 'js_mute'
-  %li#checkout
+  %li#checkout{data: {pass_id: @pass.try(:id)}}
     - if @pass
-      Thanks! Pass valid until #{@pass.valid_until.to_s(:long)}
+      Thanks! Pass valid until
+      %span#pass_valid_until{data: {date: @pass.valid_until.to_s(:iso8601)}}
+        = @pass.valid_until.to_s(:long)
     - else
       = stripe_checkout_form
   %li

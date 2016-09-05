@@ -53,3 +53,7 @@ $ ->
           x + ' second delay'
 
         $('#js_delay').text info
+
+  if date_in_utc = $('#pass_valid_until').data('date')
+    date = new Date date_in_utc
+    $('#pass_valid_until').html(date.toLocaleString())

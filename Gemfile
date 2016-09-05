@@ -7,6 +7,8 @@ gem 'sass-rails'
 gem 'rack-canonical-host'
 gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'stripe'
+gem 'pg'
 
 group :production do
   gem 'rails_12factor'

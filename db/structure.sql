@@ -50,7 +50,7 @@ SET default_with_oids = false;
 CREATE TABLE passes (
     id uuid DEFAULT uuid_generate_v4() NOT NULL,
     email character varying(255) NOT NULL,
-    stripe_token character varying(255) NOT NULL,
+    billing_ref character varying(255) NOT NULL,
     seconds_of_use integer DEFAULT 0 NOT NULL,
     valid_until timestamp with time zone NOT NULL,
     created_at timestamp with time zone NOT NULL,

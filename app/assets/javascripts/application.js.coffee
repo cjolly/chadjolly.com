@@ -38,7 +38,6 @@ $ ->
           $('#js_mute').text('Stop')
           $('#js_range').prop('disabled', false)
 
-
           setInterval ->
             usage++ if audioCtx.state == 'running'
             console?.log audioCtx.state + ': ' + delayPedal.delayTime.value.toFixed(2) + ', total: ' + usage

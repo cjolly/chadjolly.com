@@ -11,7 +11,7 @@ class PassesController < ApplicationController
       pass = Pass.create_24hr!(email: params.fetch(:stripeEmail), billing_ref: charge.id)
 
       Rails.logger.info %(at=info source=stripe desc="Successful Charge #{charge.id}" request_id=#{request.uuid}")
-      cookies[:token] = pass.id
+
       redirect_to pass
     else
       Rails.logger.error %(at=error source=stripe desc="Unsuccessful Charge. Token: #{params[:stripeToken]} Error: #{charge.failure_message}" request_id=#{request.uuid}")

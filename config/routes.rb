@@ -3,7 +3,7 @@ ChadJolly::Application.routes.draw do
   root to: 'pages#home'
   get '/packers', to: 'pages#packers'
   get '/weather', to: 'pages#weather'
-  get '/radbuff',  to: 'pages#radbuff'
+  get '/radio',  to: 'pages#radbuff'
 
   resources :passes
 

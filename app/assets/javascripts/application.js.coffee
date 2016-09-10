@@ -2,8 +2,11 @@
 #= require mozdevs/polyfill
 
 # TODO:
-# Timing
-# Errors for browser feature absence.
+# user-declined audio error
+# help page
+# better control toggling
+# CTA on slider click pre-purchase
+# actually expire passes...
 # save state - so on reload/accidental navigate is saves last setting
 
 $ ->

@@ -4,7 +4,7 @@ ChadJolly::Application.routes.draw do
   get '/packers', to: 'pages#packers'
   get '/weather', to: 'pages#weather'
   get '/radio',  to: 'pages#radbuff'
-
+  get '/errors', to: 'pages#errors'
   resources :passes
 
   # Let's Encrypt!

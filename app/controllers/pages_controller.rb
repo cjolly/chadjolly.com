@@ -56,4 +56,9 @@ class PagesController < ApplicationController
   def radbuff
 
   end
+
+  def errors
+    Rails.logger.error %(at=error type=browser_not_supported desc="#{params[:ua]}")
+    head :ok
+  end
 end

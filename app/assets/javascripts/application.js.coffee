@@ -8,11 +8,15 @@
 # CTA on slider click pre-purchase
 # actually expire passes...
 # save state - so on reload/accidental navigate is saves last setting
+# JS error reporting
+# Rails 5
 
 $ ->
   unless window.AudioContext
     $('#app').hide()
     $('#browser_not_supported').show()
+    $.ajax
+      url: '/errors?ua=' + encodeURIComponent(navigator.userAgent)
 
   $('#js_mute').on 'click', ->
     if audioCtx?

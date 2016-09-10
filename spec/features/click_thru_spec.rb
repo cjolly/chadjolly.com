@@ -20,4 +20,14 @@ describe "The Site" do
     visit "/weather"
     expect(page).to have_content("Jolly Weather Station")
   end
+
+  it "should display the radio page" do
+    visit "/radio"
+    expect(page).to have_content("Radio Sync")
+  end
+
+  it "has error logger URL to document unsupported browsers" do
+    visit "/errors?ua=some-unsupported-browser-ua"
+    expect(page.body).to be_blank
+  end
 end

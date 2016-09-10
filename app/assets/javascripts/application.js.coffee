@@ -10,6 +10,11 @@
 # save state - so on reload/accidental navigate is saves last setting
 # JS error reporting
 # Rails 5
+# lograge
+# scripts to rule them all
+# Some friggin tests
+# CircleCI
+
 
 $ ->
   unless window.AudioContext

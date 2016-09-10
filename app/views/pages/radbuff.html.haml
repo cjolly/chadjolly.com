@@ -1,6 +1,6 @@
 %h2 Radio Sync
 
-%ol
+%ol#app
   %li Connect radio to line-in/mic port
   %li
     Ensure audio is working
@@ -19,3 +19,16 @@
     = range_field 'dude', 'bro', in: 0..30, step: 0.1, value: 0, id: 'js_range', disabled: @pass.nil?, style: 'width: 75%'
     #js_delay{style: 'display:none'} Realtime
   %li Enjoy game
+
+#browser_not_supported{style: 'display:none;'}
+  %p Bummer. Your browser doesn't have the audio features necessary for Radio Sync.
+  %p But wait, <strong>there's still hope!</strong>
+  %p
+    The latest version of
+    %a{href: 'https://www.google.com/intl/en/chrome/browser/desktop/index.html'} Google Chrome
+    or
+    %a{href: 'https://www.mozilla.org/en-US/firefox/new/'} Firefox
+    should work great. You may even have one of these already installed.
+  %p You'll also need to be on a desktop computer, mobile browsers currently don't support these features, unfortunately.
+  %p
+    Stop back with one of those browsers and you should be good to go.

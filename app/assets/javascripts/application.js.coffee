@@ -7,6 +7,10 @@
 # save state - so on reload/accidental navigate is saves last setting
 
 $ ->
+  unless window.AudioContext
+    $('#app').hide()
+    $('#browser_not_supported').show()
+
   $('#js_mute').on 'click', ->
     if audioCtx?
       $('#js_delay').show()

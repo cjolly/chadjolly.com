@@ -60,7 +60,8 @@ $ ->
 
           $('#js_delay').show()
           $('#js_mute').text('Stop')
-          $('#js_range').prop('disabled', false)
+          if $('#checkout').data('pass-id')?
+            $('#js_range').prop('disabled', false)
 
           setInterval ->
             usage++ if audioCtx.state == 'running'

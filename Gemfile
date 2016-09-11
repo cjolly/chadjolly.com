@@ -14,6 +14,7 @@ group :production do
   gem 'rails_12factor'
   gem 'unicorn'
   gem 'uglifier'
+  gem 'lograge'
 end
 
 group :development, :test do

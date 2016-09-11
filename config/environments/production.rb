@@ -83,4 +83,12 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+    # https://github.com/roidrage/lograge
+  config.lograge.enabled = ENV['DISABLE_LOGRAGE'].blank?
+  config.lograge.custom_options = lambda do |event|
+    {
+      request_id: event.payload[:request_id]
+    }
+  end
 end

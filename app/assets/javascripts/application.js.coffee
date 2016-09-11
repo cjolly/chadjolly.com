@@ -3,15 +3,15 @@
 
 # TODO:
 # better help content
-# actually expire passes... we've got a month from first purchase, hah.
-# Rails 5
-# lograge
+# store pass-id, redirect to URL if present.
+# seconds_of_use setInterval updates
 # scripts to rule them all
 # Some friggin tests
 # CircleCI
 # Free pass URL - create 1 day toke
 # Standardize id/class for JS
 # save state - so on reload/accidental navigate is saves last setting
+# actually expire passes... we've got a month from first purchase, hah.
 
 ensureBrowserSupport = ->
   unless window.AudioContext?

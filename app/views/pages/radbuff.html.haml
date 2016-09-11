@@ -1,5 +1,5 @@
 %h2 Radio Sync
-
+%p Mute the TV announcers and listen to the local radio broadcast with no delay, for a beer.
 %ol#app
   %li Connect radio to line-in/mic port.
   %li
@@ -24,7 +24,7 @@
     #js_slider_container
       = range_field 'dude', 'bro', in: 0..30, step: 0.1, value: 0, id: 'js_range', disabled: true, style: 'width: 75%'
     #js_delay{style: 'display:none'} Realtime
-  %li.controls Enjoy game.
+  %li.controls Enjoy game!
 
 #browser_not_supported{style: 'display:none;'}
   %p Bummer. Your browser doesn't have the audio features necessary for Radio Sync.

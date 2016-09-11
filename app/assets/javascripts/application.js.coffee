@@ -2,11 +2,8 @@
 #= require mozdevs/polyfill
 
 # TODO:
-# help page
-# CTA on slider click pre-purchase
-# actually expire passes...
-# save state - so on reload/accidental navigate is saves last setting
-# JS error reporting
+# better help content
+# actually expire passes... we've got a month from first purchase, hah.
 # Rails 5
 # lograge
 # scripts to rule them all
@@ -14,6 +11,7 @@
 # CircleCI
 # Free pass URL - create 1 day toke
 # Standardize id/class for JS
+# save state - so on reload/accidental navigate is saves last setting
 
 ensureBrowserSupport = ->
   unless window.AudioContext?

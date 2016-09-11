@@ -1,11 +1,11 @@
 %h2 Radio Sync
 
 %ol#app
-  %li Connect radio to line-in/mic port
+  %li Connect radio to line-in/mic port.
   %li
     #ensure
-      Ensure audio is working
       = button_tag 'Start', id: 'js_mute'
+      Can you hear radio on computer's speakers?
     #ensure_error{style: 'display:none;'}
       Acess to the microphone was denied. You'll need to enable it in settings.
       %ul
@@ -19,12 +19,12 @@
     - else
       = stripe_checkout_form
   %li.controls
-    Use slider to sync radio audio to game action on TV
+    Use slider to sync radio audio to game action on TV.
     %br
     #js_slider_container
       = range_field 'dude', 'bro', in: 0..30, step: 0.1, value: 0, id: 'js_range', disabled: true, style: 'width: 75%'
     #js_delay{style: 'display:none'} Realtime
-  %li.controls Enjoy game
+  %li.controls Enjoy game.
 
 #browser_not_supported{style: 'display:none;'}
   %p Bummer. Your browser doesn't have the audio features necessary for Radio Sync.

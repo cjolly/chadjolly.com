@@ -58,7 +58,11 @@ class PagesController < ApplicationController
   end
 
   def errors
-    Rails.logger.error %(at=error type=browser_not_supported desc="#{params[:ua]}")
+    if params[:ua]
+      Rails.logger.error %(at=error type=browser_not_supported desc="#{params[:ua]}")
+    elsif params[:denied]
+      Rails.logger.error %(at=error type=user_denied desc="#{params[:denied]}")
+    end
     head :ok
   end
 end

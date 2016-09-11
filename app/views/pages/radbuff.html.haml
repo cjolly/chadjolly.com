@@ -3,22 +3,28 @@
 %ol#app
   %li Connect radio to line-in/mic port
   %li
-    Ensure audio is working
-    %br
-    = button_tag 'Start', id: 'js_mute'
-  %li#checkout{data: {pass_id: @pass.try(:id)}}
+    #ensure
+      Ensure audio is working
+      %br
+      = button_tag 'Start', id: 'js_mute'
+    #ensure_error{style: 'display:none;'}
+      Acess to the microphone was denied. You'll need to enable it in settings.
+      %ul
+        %li= link_to 'Chrome Instructions', 'https://support.google.com/chrome/answer/2693767?hl=en', target: '_blank'
+        %li= link_to 'FireFox Instructions', 'https://support.discordapp.com/hc/en-us/articles/204392448-How-do-I-enable-my-mic-in-Firefox-', target: '_blank'
+  %li.controls#checkout{data: {pass_id: @pass.try(:id)}}
     - if @pass
       Thanks! Pass valid until
       %span#pass_valid_until{data: {date: @pass.valid_until.to_s(:iso8601)}}
         = @pass.valid_until.to_s(:long)
     - else
       = stripe_checkout_form
-  %li
+  %li.controls
     Use slider to sync radio audio to game action on TV
     %br
     = range_field 'dude', 'bro', in: 0..30, step: 0.1, value: 0, id: 'js_range', disabled: @pass.nil?, style: 'width: 75%'
     #js_delay{style: 'display:none'} Realtime
-  %li Enjoy game
+  %li.controls Enjoy game
 
 #browser_not_supported{style: 'display:none;'}
   %p Bummer. Your browser doesn't have the audio features necessary for Radio Sync.

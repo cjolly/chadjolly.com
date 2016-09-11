@@ -3,6 +3,7 @@
 
 # TODO:
 # user-declined audio error
+# $5/month, rather than 24 hours.
 # help page
 # better control toggling
 # CTA on slider click pre-purchase
@@ -14,7 +15,6 @@
 # scripts to rule them all
 # Some friggin tests
 # CircleCI
-
 
 $ ->
   unless window.AudioContext
@@ -58,6 +58,13 @@ $ ->
             usage++ if audioCtx.state == 'running'
             console?.log audioCtx.state + ': ' + delayPedal.delayTime.value.toFixed(2) + ', total: ' + usage
           , 1000
+        .catch (error) ->
+          $('#ensure').hide()
+          $('#ensure_error').show()
+          $('.controls').hide()
+          $.ajax
+            url: '/errors?denied=' + encodeURIComponent(error.name)
+
 
       $('#js_range').on 'change', ->
         x = $(this).val()

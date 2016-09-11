@@ -54,7 +54,8 @@ class PagesController < ApplicationController
   end
 
   def radbuff
-
+    @page_title = "Radio Sync | Sync Radio Broadcast to Action on TV"
+    @meta_description = "A web app that allows you to listen to your favorite local sports radio broadcast and sync it to the action on the TV, eliminating the delay"
   end
 
   def errors

@@ -8,7 +8,7 @@ class PassesController < ApplicationController
     charge = create_stripe_charge
 
     if charge.paid
-      pass = Pass.create_24hr!(email: params.fetch(:stripeEmail), billing_ref: charge.id)
+      pass = Pass.create_month!(email: params.fetch(:stripeEmail), billing_ref: charge.id)
 
       Rails.logger.info %(at=info source=stripe desc="Successful Charge #{charge.id}" request_id=#{request.uuid}")
 

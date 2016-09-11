@@ -3,7 +3,6 @@
 
 # TODO:
 # user-declined audio error
-# $5/month, rather than 24 hours.
 # help page
 # better control toggling
 # CTA on slider click pre-purchase

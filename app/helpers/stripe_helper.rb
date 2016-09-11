@@ -8,7 +8,7 @@ module StripeHelper
           key: STRIPE_PUBLISHABLE_KEY,
           amount: 500,
           name: "Radio Sync",
-          description: "24 hour pass ($5)",
+          description: "1 Month Pass ($5)",
           locale: 'auto',
           zip_code: true,
           label: 'Buy Me A Beer'

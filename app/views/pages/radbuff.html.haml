@@ -22,7 +22,8 @@
   %li.controls
     Use slider to sync radio audio to game action on TV
     %br
-    = range_field 'dude', 'bro', in: 0..30, step: 0.1, value: 0, id: 'js_range', disabled: @pass.nil?, style: 'width: 75%'
+    #js_slider_container
+      = range_field 'dude', 'bro', in: 0..30, step: 0.1, value: 0, id: 'js_range', disabled: true, style: 'width: 75%'
     #js_delay{style: 'display:none'} Realtime
   %li.controls Enjoy game
 

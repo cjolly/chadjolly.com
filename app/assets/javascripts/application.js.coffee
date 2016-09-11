@@ -3,7 +3,6 @@
 
 # TODO:
 # help page
-# better control toggling
 # CTA on slider click pre-purchase
 # actually expire passes...
 # save state - so on reload/accidental navigate is saves last setting
@@ -14,6 +13,7 @@
 # Some friggin tests
 # CircleCI
 # Free pass URL - create 1 day toke
+# Standardize id/class for JS
 
 ensureBrowserSupport = ->
   unless window.AudioContext?
@@ -25,19 +25,25 @@ ensureBrowserSupport = ->
 $ ->
   ensureBrowserSupport()
 
+  $('#js_slider_container').on 'click', ->
+    unless $('#checkout').data('pass-id')
+      alert "All I ask is a beer and the slider is yours!"
+
   $('#js_mute').on 'click', ->
     if audioCtx?
       $('#js_delay').show()
       if audioCtx.state == 'running'
         $(this).text('Start')
-        $('#js_range').prop('disabled', true)
         audioCtx.suspend()
+        if $('#checkout').data('pass-id')
+          $('#js_range').prop('disabled', true)
       else if audioCtx.state == 'suspended'
         $(this).text('Stop')
-        $('#js_range').prop('disabled', false)
         audioCtx.resume()
-    else
+        if $('#checkout').data('pass-id')
+          $('#js_range').prop('disabled', false)
 
+    else
       window.audioCtx = new window.AudioContext()
       window.usage = 0
 

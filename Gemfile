@@ -18,9 +18,9 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'dotenv-rails'
+  gem 'dotenv'
 end
 
 group :test do
-  gem 'capybara', '~> 2.4.1'
+  gem 'capybara'
 end

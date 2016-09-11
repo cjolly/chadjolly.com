@@ -2,7 +2,6 @@
 #= require mozdevs/polyfill
 
 # TODO:
-# user-declined audio error
 # help page
 # better control toggling
 # CTA on slider click pre-purchase
@@ -14,13 +13,17 @@
 # scripts to rule them all
 # Some friggin tests
 # CircleCI
+# Free pass URL - create 1 day toke
 
-$ ->
-  unless window.AudioContext
+ensureBrowserSupport = ->
+  unless window.AudioContext?
     $('#app').hide()
     $('#browser_not_supported').show()
     $.ajax
       url: '/errors?ua=' + encodeURIComponent(navigator.userAgent)
+
+$ ->
+  ensureBrowserSupport()
 
   $('#js_mute').on 'click', ->
     if audioCtx?

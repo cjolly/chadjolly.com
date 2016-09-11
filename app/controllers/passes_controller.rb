@@ -27,7 +27,7 @@ class PassesController < ApplicationController
           amount: 500,
           currency: "usd",
           source: params.fetch(:stripeToken),
-          description: "24 hour radio sync pass"
+          description: "1 Month Pass ($5)"
         )
       rescue Stripe::StripeError => e
         require 'ostruct'

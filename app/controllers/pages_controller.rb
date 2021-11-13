@@ -66,7 +66,9 @@ class PagesController < ApplicationController
   end
 
   def is_the_shitter_full
-
+    if params[:reset]
+      Full.reset!
+    end
   end
 
   def errors

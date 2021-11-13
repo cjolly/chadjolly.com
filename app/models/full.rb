@@ -1,11 +1,13 @@
 class Full
-  @@full = false
-
   def self.full
-    @@full
+    Rails.cache.fetch("shitters_full")
   end
 
   def self.full!
-    @@full = true
+    Rails.cache.write("shitters_full", true)
+  end
+
+  def self.reset!
+    Rails.cache.write("shitters_full", false)
   end
 end

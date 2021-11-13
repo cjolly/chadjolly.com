@@ -8,6 +8,9 @@ ChadJolly::Application.routes.draw do
   get '/errors', to: 'pages#errors'
   resources :passes
 
+  get '/is_the_shitter_full', to: 'pages#is_the_shitter_full'
+  post '/shitters_full', to: 'pages#shitter'
+
   # Stop the noisy rails logging for missed routes.
   get '/*all' => proc {|env| [404, {}, [] ]}, via: :all
 end

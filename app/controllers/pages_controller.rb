@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  skip_before_filter :verify_authenticity_token, only: [:shitter]
+
   def home
 
   end
@@ -56,6 +58,15 @@ class PagesController < ApplicationController
   def radbuff
     @page_title = "Radio Sync | Sync Radio Broadcast to Action on TV"
     @meta_description = "A web app that allows you to listen to your favorite local sports radio broadcast and sync it to the action on the TV, eliminating the delay"
+  end
+
+  def shitter
+    Full.full!
+    head :ok
+  end
+
+  def is_the_shitter_full
+
   end
 
   def errors

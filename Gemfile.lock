@@ -226,7 +226,7 @@ DEPENDENCIES
   unicorn
 
 RUBY VERSION
-   ruby 2.2.4p230
+   ruby 2.7.4p191
 
 BUNDLED WITH
-   1.16.1
+   2.2.23
